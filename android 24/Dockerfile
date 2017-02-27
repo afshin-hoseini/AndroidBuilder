@@ -9,5 +9,5 @@ RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all -
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-android-m2repository
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-google-google_play_services
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-google-m2repository
-RUN export ANDROID_HOME=$PWD/android-sdk-linux
-RUN export PATH=$PATH:$PWD/android-sdk-linux/platform-tools/
+ENV ANDROID_HOME ${PWD}/android-sdk-linux
+ENV PATH ${PATH}:${ANDROID_HOME}/platform-tools/:${ANDROID_HOME}/tools
