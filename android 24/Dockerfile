@@ -5,7 +5,7 @@ RUN wget --quiet --output-document=android-sdk.tgz https://dl.google.com/android
 RUN tar --extract --gzip --file=android-sdk.tgz
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter android-24
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter platform-tools
-RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter build-tools-4.0.3
+RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter build-tools-24.0.3
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-android-m2repository
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-google-google_play_services
 RUN echo y | android-sdk-linux/tools/android --silent update sdk --no-ui --all --filter extra-google-m2repository
